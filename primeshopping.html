@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prime Shopping</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .left {
+        /* background-image:url(../images/logo.png); */
+        display: inline-block;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+    }
+    
+    .left img {
+        border-radius: 20px;
+        width: 150px;
+        height: 120px;
+        /* filter: invert(100%); */
+    }
+    
+    body {
+        background-image: url(../images/bgclo.jpg);
+        background-size: 1480px 580px;
+        background-repeat: no-repeat;
+        font-family: 'DynaPuff', cursive;
+    }
+    
+    .nav {
+        display: block;
+        width: 60%;
+        margin: 0px auto;
+        /* background-color: black; */
+        /* opacity: 0.7; */
+        border-radius: 5px;
+        /* position: fixed; */
+    }
+    
+    .nav li {
+        margin: 10px 8px;
+        display: inline-block;
+        /* display: flex; */
+        /* flex-wrap: nowrap; */
+        /* border: 1px solid red; */
+        padding: 4px 10px;
+        /* color: white; */
+        font-size: 25px;
+    }
+    
+    .nav a {
+        padding: 2px;
+        margin-left: 12px;
+        /* align-items: center; */
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+    }
+    
+    .nav a:hover {
+        background-color: whitesmoke;
+        cursor: pointer;
+        border-radius: 5px;
+        color: rgb(67, 40, 93);
+        transition: 0.5s;
+    }
+    
+    .right img {
+        /* margin-top: 3px; */
+        border-radius: 3px;
+        position: absolute;
+        right: 170px;
+        top: 4px;
+        width: 35px;
+        height: 35px;
+        filter: invert(100%);
+    }
+    
+    .right {
+        /* float:right; */
+        display: inline-block;
+        position: absolute;
+        right: 25px;
+        top: 18px;
+        /* border-radius: 15px; */
+       
+    }
+    
+    .right input {
+        padding: 8px;
+        border-radius: 15px;
+        width: 140px;
+    }
+    
+    .body {
+        color: white;
+        /* border: 2px solid red; */
+        text-align: center;
+        font-size: 50px;
+        text-shadow: 2px 2px black;
+    }
+    
+    .body h3 {
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 50px;
+        color: green;
+        text-shadow: 2px 2px rgb(167, 253, 213);
+    }
+    
+    .body h5 {
+        /* margin: 0px 170px; */
+        /* border-radius: 50px; */
+        background-color: beige;
+        opacity: 0.7;
+        color: rgb(4, 4, 82);
+    }
+    
+    .body h3:hover {
+        color: black;
+        cursor: copy;
+    }
+    
+    .dis {
+        background-color: azure;
+        border: 2px solid black;
+        font-size: 400%;
+        background-image: url(../images/cloths.jpg);
+    }
+    
+    .btn {
+        margin: 20px;
+        text-align: center;
+        /* padding: 10px; */
+        /* height: 100px; */
+    }
+    
+    #bt {
+        border-radius: 9px;
+        font-size: 20px;
+        width: 180px;
+        height: 60px;
+        display: inline-block;
+        background: linear-gradient(45deg, #5d8df5, #f659bc);
+        padding: 10px 20px;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #fff;
+        box-shadow: 3px 8px 22px rgba(94, 28, 68, 0.15);
+    }
+    
+    #bt a {
+        text-decoration: none;
+    }
+    
+    #bt:hover {
+        font-size: 28px;
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(20, 17, 17);
+        transition: 1s;
+        /* transform: 0.9s; */
+    }
+    
+    .btn p {
+        color: white;
+        font-size: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 1px 1px ghostwhite;
+    }
+    
+    .heading {
+        color: brown;
+        /* border:2px solid green; */
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        text-decoration: underline;
+    }
+    
+    .container {
+        /* border: 2px solid black; */
+        display: flex;
+    }
+    
+    .box {
+        margin: 5px;
+        /* border: 2px solid red; */
+        width: 33%;
+        height: 500px;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .box a {
+        text-decoration: none;
+    }
+    
+    #M img {
+        width: 100%;
+        height: 90%;
+        /* padding: 10px; */
+    }
+    /* .box:hover#M img,#W img,#C img{
+        scale: 1.1;
+    } */
+    
+    #W img {
+        width: 100%;
+        height: 90%;
+          /* padding: 10px; */
+    }
+    
+    #C img {
+        width: 100%;
+        height: 90%;
+    }
+    
+    .footer {
+        border: 2px solid black;
+        color: rgb(219, 216, 216);
+        /* margin: 10px; */
+        height: 80px;
+        text-align: center;
+        /* border-radius: 40px; */
+        padding-top: 10px;
+        font-family: 'DynaPuff', cursive;
+        background-color: black;
+    }
+    
+    .footer p {
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    
+    .footer:hover {
+        background-color: rgb(54, 51, 51);
+        color: yellow;
+        font-size: 20px;
+    }
+    
+    .product {
+        /* border: 4px solid black; */
+        display: flex;
+          /* padding: 10px; */
+    }
+    /* .product2 {
+        border: 4px solid black;
+        display: flex;
+    }
+
+    .product3 {
+        border: 4px solid black;
+        display: flex;
+    } */
+    /* .box6 h5 {
+        margin-left: 100px;
+        transform: rotate(270deg);
+        padding: 0px;
+    } */
+    
+    .box6 {
+        /* display: flex; */
+        border: 2px solid grey;
+        width: 200px;
+        margin: auto;
+        height: 300px;
+        overflow: hidden;
+        margin: 4px;
+        font-style: italic;
+    padding: 0px; 
+    }
+    
+    .box6:hover.box6 img {
+        scale: 1.2;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .box6 img {
+        transition: 1s;
+        width: 100%;
+        height: 80%;
+        background-position: top;
+    }
+    
+    .rock {
+        border-radius: 9px;
+        font-size: 12px;
+        width: 120px;
+        height: 30px;
+        display: inline-block;
+        background: linear-gradient(45deg, #e1ea8d, #40ea49);
+        padding: 5px 10px;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: black;
+        box-shadow: 3px 8px 22px rgba(94, 28, 68, 0.15);
+    }
+    
+    .whole {
+        text-align: center;
+        background-color: #b8cbf5;
+        font-size: 30px;
+        /* margin-top: 10px; */
+        padding-top: 10px;
+    }
+    
+    .boxx {
+        color: #0c54ef;
+    }
+    
+    .contact {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .bx {
+        margin: 5px;
+        /* border: 2px solid red; */
+        width: 50px;
+        height: 50px;
+    }
+    
+    .bx img {
+        width: 100%;
+        height: 100%;
+    }
+    /* .bx img:hover{
+        filter: invert(100%);
+    } */
+    #dis{
+        border: 2px solid green;
+        height: 100px;
+        
+
+    }
+    .end {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .end:hover {
+        background-color: grey;
+        color: aliceblue;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        margin-left: 300px;
+        margin-right: 300px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="../images/mylogo.png" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#men">Mens</a></li>
+                <li><a href="#women">Womens</a></li>
+                <li><a href="#kid">Kids</a></li>
+                <li><a href="#down">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="btn"> -->
+            <img src="../images/carttt.png" alt="">
+            <input type="text" class="srh" placeholder="Search Here...">
+            </button>
+
+        </div>
+    </header>
+
+    <div class="body">
+        <h3>Welcome to Prime Shopping</h3>
+        <h6>Fashion Shop</h6>
+        <br>
+        <h5>A Platform to build high-value <br> global fashion brands</h5>
+    </div>
+    <!-- <div class="dis">
+        <h3>Discont 50% Off</h3>
+        
+    </div> -->
+    <div class="btn">
+        <p>2022 Collection</p>
+        <button id="bt"><a href="#">Shop Now</a></button>
+    </div>
+    <br>
+    <br>
+    <div class="heading">
+        <h4>Categories in Prime Shopping..</h4>
+    </div>
+    <div class="container">
+
+        <div class="box" id="M">
+            <a href="#">
+                <h6>Mens</h6>
+            </a>
+
+            <img src="../images/mens.jpg" alt="">
+        </div>
+        <div class="box" id="W">
+            <a href="#">
+                <h6>Womens</h6>
+            </a>
+
+            <img src="../images/women.jfif" alt="">
+        </div>
+        <div class="box" id="C">
+            <a href="#">
+                <h6>Kids</h6>
+            </a>
+
+            <img src="../images/children.jfif" alt="">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="whole">
+        <h4>This is our few collection in Prime Shopping..</h4>
+
+
+        <br>
+        <div class="boxx" id="men">
+            <h5>Collection for Mens</h5>
+        </div>
+        <div class="product">
+
+            <div class="box6">
+                <img src="../images/shirt1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/shirt2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/pant1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/pant2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/hoddie1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/hodie2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+        </div>
+        <br>
+        <div class="boxx" id="women">
+            <h5>Collection for Womens</h5>
+        </div>
+        <div class="product">
+            <div class="box6">
+                <img src="../images/len1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/len2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/saree1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/saree2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/c1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/c2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+
+            </div>
+        </div>
+        <br>
+        <div class="boxx" id="kid">
+            <h5>Collection for Kids</h5>
+        </div>
+        <div class="product">
+            <div class="box6">
+                <img src="../images/cool1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/cool3.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/f2.jpg" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/f3.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/ch2.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+            </div>
+            <div class="box6">
+                <img src="../images/ch1.jfif" alt="">
+                <a href="#" class="rock">Add to Cart</a>
+
+            </div>
+        </div>
+    </div>
+    <div id="dis">
+        Discount section
+    </div>
+
+    <div class="footer">
+        <h4>Thanks for visiting our website</h4>
+        <p>Have a Great Day...</p>
+    </div>
+
+    <br>
+
+
+</body>
+<footer>
+    <div class="end">
+        <h4>Contact Us</h4>
+    </div>
+    <div class="contact" id="down">
+
+        <div class="bx">
+            <img src="../images/inss.jfif" alt="">
+        </div>
+        <div class="bx">
+            <img src="../images/face.png" alt="">
+        </div>
+        <div class="bx">
+            <img src="../images/you.png" alt="">
+        </div>
+        <div class="bx">
+            <img src="../images/twit.png" alt="">
+        </div>
+    </div>
+
+</footer>
+
+</html>
